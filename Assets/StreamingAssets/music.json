@@ -1,0 +1,100 @@
+{
+    "songs": [
+        {
+            "displayName": "GTE-430",
+            "fileName": "GTE-430",
+            "composer": "Suno AI",
+            "type": "Regular"
+        },
+        {
+            "displayName": "GTE-433",
+            "fileName": "GTE-433",
+            "composer": "Suno AI",
+            "type": "Regular"
+        },
+        {
+            "displayName": "Ninja Dojo(Suno Remix)",
+            "fileName": "Ninja Guy - Ninja Dojo(Suno Remix)",
+            "composer": "Suno AI",
+            "type": "Regular"
+        },
+        {
+            "displayName": "Red Obscuration(Studio Mix)",
+            "fileName": "Red Obscuration(Studio Version)",
+            "composer": "Suno AI",
+            "type": "Intense"
+        },
+        {
+            "displayName": "Saliva(ERECT)",
+            "fileName": "Saliva(ERECT)",
+            "composer": "Suno AI",
+            "type": "Intense"
+        },
+        {
+            "displayName": "SHGGW-231",
+            "fileName": "SHGGW-231",
+            "composer": "Suno AI",
+            "type": "Intense"
+        },
+        {
+            "displayName": "SHGGW-236",
+            "fileName": "SHGGW-236",
+            "composer": "Suno AI",
+            "type": "Regular"
+        },
+        {
+            "displayName": "SHGGW-239",
+            "fileName": "SHGGW-239",
+            "composer": "Suno AI",
+            "type": "Regular"
+        },
+        {
+            "displayName": "Thicc Shake(CMC Flavour)",
+            "fileName": "Thicc Shake(Coconut Milk Chocolate Flavour)",
+            "composer": "Suno AI",
+            "type": "Intense"
+        },
+        {
+            "displayName": "Thicc Shake(Milk Chocolate Flavour)",
+            "fileName": "Thicc Shake(Milk Chocolate Flavour)",
+            "composer": "Suno AI",
+            "type": "Regular"
+        },
+        {
+            "displayName": "Thicc Shake(Salty Caramel Flavour)",
+            "fileName": "Thicc Shake(Salty Caramel Flavour)",
+            "composer": "Suno AI",
+            "type": "Regular"
+        },
+        {
+            "displayName": "Voresistance",
+            "fileName": "Voresistance",
+            "composer": "Suno AI",
+            "type": "Intense"
+        },
+        {
+            "displayName": "Thicc Shake(Dragon Fruit Flavour)",
+            "fileName": "Thicc Shake(Dragon Fruit Flavour) (Remastered)",
+            "composer": "Suno AI",
+            "type": "Intense"
+        },
+        {
+            "displayName": "Air Strike(Straight Road Mix)",
+            "fileName": "Air Strike(Straight Road Mix)",
+            "composer": "Suno AI",
+            "type": "Intense"
+        },
+        {
+            "displayName": "Black Box(Live Performance)",
+            "fileName": "Black Box (Live Performance)",
+            "composer": "Suno AI",
+            "type": "Regular"
+        },
+        {
+            "displayName": "Midnight Dreams so fine(V3)",
+            "fileName": "Midnight Dreams so fine(V3)",
+            "composer": "Suno AI",
+            "type": "Intense"
+        }
+    ]
+}

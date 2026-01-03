@@ -1,0 +1,68 @@
+{
+    "cars": [
+        {
+            "id": "GEEDRO",
+            "nickname": "GEEDRO",
+            "shortName": "GEEZ",
+            "image": "GEEDRO",
+            "icon": "GEEDRO",
+            "countryFlag": "ua"
+        },
+        {
+            "id": "XenoDoesStuff",
+            "nickname": "XenoDoesStuff",
+            "shortName": "XENO",
+            "image": "XenoDoesStuff",
+            "icon": "XenoDoesStuff",
+            "countryFlag": "id"
+        },
+        {
+            "id": "AlejoGD",
+            "nickname": "AlejoGD",
+            "shortName": "ALGD",
+            "image": "AlejoGD",
+            "icon": "AlejoGD",
+            "countryFlag": "co"
+        },
+        {
+            "id": "GameWars",
+            "nickname": "GameWars",
+            "shortName": "MOJI",
+            "image": "GameWars",
+            "icon": "GameWars",
+            "countryFlag": "us"
+        },
+        {
+            "id": "MGManiac",
+            "nickname": "MGManiac",
+            "shortName": "MGMA",
+            "image": "MGManiac",
+            "icon": "MGManiac",
+            "countryFlag": "us"
+        },
+        {
+            "id": "Snakyjoel",
+            "nickname": "Snakyjoel",
+            "shortName": "SNKJ",
+            "image": "Snakyjoel",
+            "icon": "Snakyjoel",
+            "countryFlag": "ve"
+        },
+        {
+            "id": "3DLoukazik",
+            "nickname": "3DLoukazik",
+            "shortName": "LOUK",
+            "image": "3DLoukazik",
+            "icon": "3DLoukazik",
+            "countryFlag": "us"
+        },
+        {
+            "id": "MagRootBeer",
+            "nickname": "MagRootBeer",
+            "shortName": "MAG",
+            "image": "MagRootBeer",
+            "icon": "MagRootBeer",
+            "countryFlag": "us"
+        }
+    ]
+}
