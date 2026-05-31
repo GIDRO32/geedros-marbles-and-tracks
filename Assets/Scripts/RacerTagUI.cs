@@ -8,7 +8,6 @@ namespace TopDownRace
         public Text positionText;
         public Text shortNameText;
         public Image iconImage;
-        public Image countryFlagImage;
         public Text tireTypeText;
         public Text intervalText;
         [HideInInspector] public float intervalGap;
@@ -23,36 +22,68 @@ namespace TopDownRace
             positionText.text = position.ToString();
             shortNameText.text = data.shortName;
             iconImage.sprite = data.icon;
-            countryFlagImage.sprite = data.countryFlag;
+
+            // Get Rivals component to check finish status
+            if (racer == null)
+            {
+                racer = physics.GetComponent<Rivals>();
+            }
+
             if (racer != null && racer.hasFinishedRace && !isPinned)
             {
-                pinnedInterval = interval; // Pin the interval at finish
+                pinnedInterval = interval;
                 isPinned = true;
                 intervalText.text = "FINISH";
                 intervalText.color = Color.green;
+
+                // NEW: Visual feedback for finished position
+                if (positionText != null)
+                {
+                    positionText.color = Color.yellow; // Highlight finished position
+                }
             }
             else if (isPinned)
             {
                 intervalText.text = "FINISH";
                 intervalText.color = Color.green;
+
+                if (positionText != null)
+                {
+                    positionText.color = Color.yellow;
+                }
             }
             else if (physics.health <= 0)
             {
                 intervalText.text = "OUT";
-                intervalText.color = Color.red; // Optional: Highlight "OUT" in red
+                intervalText.color = Color.red;
+
+                if (positionText != null)
+                {
+                    positionText.color = Color.gray; // Dimmed for OUT cars
+                }
             }
             else if (lapDifference > 1)
             {
-                intervalText.text = $"-{lapDifference - 1} lap{(lapDifference > 1 ? "s" : "")}";
-                intervalGap = 0f; // Reset intervalGap when showing lap difference
+                intervalText.text = $"-{lapDifference - 1} lap{(lapDifference > 2 ? "s" : "")}";
+                intervalGap = 0f;
+
+                if (positionText != null)
+                {
+                    positionText.color = Color.white;
+                }
             }
             else
             {
                 intervalGap = interval;
                 intervalText.text = interval <= 0 ? "LEADER" : $"+{interval:F2}s";
+
+                if (positionText != null)
+                {
+                    positionText.color = Color.white;
+                }
             }
 
-            // Tire type display (S / M / H) with colors
+            // Tire type display
             if (tireTypeText != null && physics != null)
             {
                 switch (physics.tireType)

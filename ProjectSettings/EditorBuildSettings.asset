@@ -23,4 +23,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TopDownRace/Scenes/HuaHinArena.unity
     guid: 630ea930589ef4a4c852fcf42bebd918
+  - enabled: 1
+    path: Assets/TopDownRace/Scenes/Bangkok.unity
+    guid: 115ce7b4652ef3246867dbedff02acbe
+  - enabled: 1
+    path: Assets/TopDownRace/Scenes/Mojiverse.unity
+    guid: 3ecb3aafab8834545b44e389e02473e5
+  - enabled: 1
+    path: Assets/TopDownRace/Scenes/Navcun.unity
+    guid: b96e45231ff42c7429bbaffd03add620
+  - enabled: 1
+    path: Assets/TopDownRace/Scenes/RedShard.unity
+    guid: 61ca93f7edf6a0742b5c27eb2a96e73a
+  - enabled: 1
+    path: Assets/TopDownRace/Scenes/Sketchbook.unity
+    guid: 4645b812c4c055046948b7f93c76add7
   m_configObjects: {}

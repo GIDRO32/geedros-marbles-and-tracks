@@ -43,6 +43,12 @@ namespace TopDownRace
         public float steerTorque = 30f; // Reduced for smoother steering
         private bool isOut = false; // Flag to track if car is out
         public float finishDecelerationRate = 5f; // Rate at which speed and angular velocity reduce when finishing, adjustable in Inspector
+
+        [Header("Backwards Detection")]
+        public float backwardsThreshold = -0.3f; // If dot product < this, we're going backwards
+        private Vector3 lastForwardDirection;
+        private float stuckTimer = 0f;
+        private const float STUCK_TIME_THRESHOLD = 2f;
         void Start()
         {
             m_Body = GetComponent<Rigidbody2D>();
@@ -82,7 +88,16 @@ namespace TopDownRace
             }
             m_SpeedForce = effectiveSpeedForce;
         }
+        public bool IsMovingBackwards()
+        {
+            Vector2 velocity = m_Body.velocity;
+            Vector2 forward = Helper.ToVector2(transform.right);
 
+            // Dot product: > 0 = forward, < 0 = backward
+            float dot = Vector2.Dot(velocity.normalized, forward);
+
+            return velocity.magnitude > 2f && dot < backwardsThreshold;
+        }
         public void ChangeTireType(TireType newType)
         {
             tireType = newType;
@@ -197,7 +212,7 @@ namespace TopDownRace
                     int myLaps = rivalScript != null ? rivalScript.m_FinishedLaps : 0;
                     if (myLaps >= leaderLaps) // Only reduce health if not lapped
                     {
-                        health = Mathf.Max(0f, health - 0.4f);
+                        health = Mathf.Max(0f, health - 0.25f);
                     }
                 }
             }

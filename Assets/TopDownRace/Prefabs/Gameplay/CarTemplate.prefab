@@ -213,15 +213,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayLength: 20
-  sideAngle: 45
+  rayCount: 6
+  arcAngle: 90
+  sideAngle: 30
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 0
   forwardBlocked: 0
   leftClear: 0
   rightClear: 0
   hasObstacleInBubble: 0
   closestObstacleDistance: 0
+  rayHitFraction: []
+  rayHitType: 
+  closestWallDistance: 0
+  closestCarDistance: 0
+  closestWallRayIndex: -1
+  closestCarRayIndex: -1
 --- !u!1 &3939354964761155830
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,8 +284,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 18
-  m_LinearDrag: 1
-  m_AngularDrag: 8
+  m_LinearDrag: 1.2
+  m_AngularDrag: 5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -342,14 +350,32 @@ MonoBehaviour:
   m_FinishedLaps: 0
   m_Control: 0
   missteerChance: 0.25
-  maxMissteerAngle: 15
+  maxMissteerAngle: 20
   sensor: {fileID: 8683133975941341171}
-  steerStrength: 20
-  slowdownFactor: 3
   carPhysics: {fileID: 2114872602787577928}
+  steerStrength: 35
+  slowdownFactor: 3
   lapGap: 0
   pitstopDuration: 0
   hasFinishedRace: 0
+  wallAvoidanceWeight: 2.5
+  carAvoidanceWeight: 1
+  steerProportionalRange: 60
+  minThrottle: 0.25
+  brakeStartFraction: 0.8
+  interactionRange: 8
+  lateralThreshold: 3.5
+  overtakeSteer: 0.55
+  blockSteer: 0.45
+  overtakeCommitTime: 1.5
+  overtakeSpeedRatio: 1.02
+  separationDistance: 3
+  separationStrength: 0.9
+  separationThrottleEase: 0.2
+  skill: 1
+  aggression: 0.7
+  consistency: 1
+  defensiveness: 0.6
 --- !u!114 &2114872602787577928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,7 +391,7 @@ MonoBehaviour:
   m_Body: {fileID: 0}
   m_InputAccelerate: 0
   m_InputSteer: 0
-  m_SpeedForce: 25
+  m_SpeedForce: 30
   m_TireTracks: {fileID: 7337990625335902154, guid: 972fc9b6c44fb274f9c766d431ae8963,
     type: 3}
   m_TireMarkPoint: {fileID: 7777615464161209984}
@@ -377,16 +403,16 @@ MonoBehaviour:
   tires: 200
   maxSpeedForce: 0
   tireType: 0
-  baseSpeedForce: 25
+  baseSpeedForce: 30
   effectiveSpeedForce: 0
   baseMaxTires: 200
   tireWearRate: 0.00025
   inPitstop: 0
-  tireTrackWear: 0.00025
   pitRegenRate: 7
   rivalScript: {fileID: 603294218447686938}
   steerTorque: 30
   finishDecelerationRate: 0.05
+  backwardsThreshold: -0.3
 --- !u!114 &1278893472956611904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,7 +446,6 @@ MonoBehaviour:
   positionText: {fileID: 0}
   shortNameText: {fileID: 0}
   iconImage: {fileID: 0}
-  countryFlagImage: {fileID: 0}
   tireTypeText: {fileID: 0}
   intervalText: {fileID: 0}
   intervalGap: 0

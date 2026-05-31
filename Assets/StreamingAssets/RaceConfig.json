@@ -1,6 +1,6 @@
 {
-  "lapToPitstop": 3,
+  "lapToPitstop": 5,
   "pitstopDuration": 1,
-  "totalLaps": 10,
+  "totalLaps": 20,
   "lapsThreshold": 5
 }

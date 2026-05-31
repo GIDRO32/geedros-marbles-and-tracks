@@ -220,10 +220,22 @@ namespace TopDownRace
                 case 4:
                     SceneManager.LoadScene("HuaHinArena");
                     break;
+                case 5:
+                    SceneManager.LoadScene("Bangkok");
+                    break;
+                case 6: 
+                    SceneManager.LoadScene("Mojiverse");
+                    break;
+                case 7:
+                    SceneManager.LoadScene("Navcun");
+                    break;
+                case 8:
+                    SceneManager.LoadScene("Sketchbook");
+                    break;
+                case 9:
+                    SceneManager.LoadScene("RedShard");
+                    break;
             }
-
-
-
         }
     }
 }
